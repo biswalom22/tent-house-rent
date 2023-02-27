@@ -1,11 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Login from '../components/Login.vue';
-import Airport from '../components/Airport.vue';
-import Aircraft from '../components/Aircraft.vue';
-import Transaction from '../components/Transaction.vue';
-import AirportConsumptionReport from '../components/Reports/AirportConsumptionReport.vue';
-import FuelConsumptionReport from '../components/Reports/FuelConsumptionReport.vue';
+import LoginComponent from '../components/Login.vue';
+import ProductComponent from '../components/Products.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +19,8 @@ const isAuthenticated = (to, from, next) => {
 };
 
 const routes = [
+	{ path: '/', component: LoginComponent },
+	{ path: '/product', component: ProductComponent, beforeEnter: isAuthenticated },
 ];
 
 export default new VueRouter({

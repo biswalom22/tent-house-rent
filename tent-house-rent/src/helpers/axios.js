@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { baseUrl } from '@/baseUrl/baseUrl';
+import { baseUrl } from '../baseUrl/baseurl';
 
 const token = localStorage.getItem('token');
 
